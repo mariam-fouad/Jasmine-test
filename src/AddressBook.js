@@ -11,4 +11,8 @@ class AddressBook{
     getContact(index){
         return this.contactList[index];
     }
+
+    deleteContact(index){
+        this.contactList.splice(index,1);
+    }
 }
