@@ -2,7 +2,7 @@ class AddressBook{
 
     constructor(){
         this.contactList = [];
-        initialComplete = false;
+        this.initialComplete = false;
     }
      
     addContact(conatct){
@@ -22,9 +22,9 @@ class AddressBook{
         setTimeout(() => {
             this.initialComplete=true;
             if(cb){
-                return cb;
+                return cb();
             }
-        }, 3000);
+        }, 3);
     }
 
 }

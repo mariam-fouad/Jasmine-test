@@ -21,3 +21,19 @@ describe ("AddressBook",()=>{
         expect(addressBook.getContact(0)).not.toBeDefined();
     });
 }) ;
+
+
+describe ("AddressBook Asynchronous",()=>{
+    const addressBook = new AddressBook ();
+
+    beforeEach((done)=>{
+        addressBook.getInitialAddress(()=>{
+            done();
+        });
+    });
+    it('should grab the initial contact',(done)=>{
+
+        expect(addressBook.initialComplete).toBe(true);
+        done();
+    })
+});
